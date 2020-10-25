@@ -55,6 +55,7 @@
 first name: <br><input style="color:black;" type="text" name="fname" id="fname"><br><br>
 last name:<br> <input style="color:black;" type="text" name="lname" id="lname"><br><br>
 car company name: <br><input style="color:black;" type="text" name="cname" id="cname"><br><br>
+problem with vehicle: <br><input style="color:black;" type="text" name="problem" id="problem"><br><br>
 email: <br><input style="color:black;" type="text" name="email" id="email"><br><br>
 mobile no.: <br><input style="color:black;" type="number" name="mnum" id="mnum"><br><br>
 <button class="button" style="color:black;" type="button" onclick="run()">SUBMIT</button>
@@ -64,7 +65,8 @@ function run(){
 var x=document.getElementById('fname').value;
 var y=document.getElementById('lname').value;
 var z=document.getElementById('cname').value;
-
+var p=document.getElementById('problem').value;
+ 
 var a=document.getElementById('email').value;
 var atpos= a.indexOf("@");
 var dotpos= a.lastIndexOf(".");
@@ -81,6 +83,10 @@ return false;
 }
 else if(z==""){
 alert("car company name required");
+return false;
+}
+else if(p==""){
+alert("problem with company required");
 return false;
 }
 else if(a==""){
